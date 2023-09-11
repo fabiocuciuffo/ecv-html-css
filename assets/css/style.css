@@ -1,0 +1,206 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+*{
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+iframe{
+    max-width: 100%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(238, 238, 238);
+    padding: 0 50px;
+    flex-wrap: wrap;
+}
+
+nav ul{
+    display: flex;
+}
+
+ul li{
+    list-style: none;
+}
+
+nav li{
+    list-style: none;
+    margin-left: 20px;
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav img{
+    width: 200px;
+    height: auto;
+    aspect-ratio: 1/1;
+}
+
+h1{
+    color: #7fff00;
+    font-size: 2.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+}
+
+.hero_banner h2{
+    color: lightslategray;
+}
+
+.hero_banner{
+    display: flex;
+}
+
+.hero_banner div{
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_banner a{
+    text-decoration: none;
+    padding: 15px;
+    color: black;
+    background-color: rgb(127, 255, 0);
+    position: absolute;
+    bottom: 30%;
+    right: 50%;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+}
+
+.hero_banner a:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 10px rgba(172, 255, 47, 0.6);
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.description, .ingredients, .galerie{
+    border-top: 5px solid lightgray;
+    padding: 5% 10%;
+}
+
+.galerie{
+    display: grid;
+    grid-template-areas: 
+            "a b"
+            "c d";
+}
+
+.galerie img{
+    object-fit: contain;
+}
+
+.galerie img:nth-of-type(1){
+    grid-area: a;
+}
+
+.galerie img:nth-of-type(2){
+    grid-area: b;
+}
+
+.galerie img:nth-of-type(3){
+    grid-area: c;
+}
+
+.galerie img:nth-of-type(4){
+    grid-area: d;
+}
+
+footer{
+    background-color: #7fff00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 10%;
+}
+
+footer a{
+    text-decoration: none;
+    color: #616161;
+    font-weight: 900;
+}
+
+footer li{
+    color: #616161;
+}
+
+@media screen and (max-width: 820px) {
+
+    nav a{
+        font-size: 1rem;
+    }
+
+    .hero_banner{
+        flex-direction: column;
+    }
+
+    .hero_banner div{
+        width: 100%;
+        min-height: 150px;
+    }
+
+    .hero_banner a{
+        bottom: 20%;
+        transform: translateX(50%);
+    }
+
+    .galerie{
+        grid-template-areas: 
+            "a"
+            "b"
+            "c"
+            "d";
+    }
+
+    footer{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    nav{
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav li{
+        margin-left: 0;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    .description, .ingredients, .galerie{
+        padding: 20px;
+    }
+}
