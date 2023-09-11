@@ -1,0 +1,73 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul{
+    display: flex;
+}
+
+ul li{
+    list-style: none;
+}
+
+nav li{
+    list-style: none;
+    margin-left: 20px;
+}
+
+nav a, nav button{
+    color: black !important;
+    text-decoration: none !important;
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+nav img{
+    width: 200px;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    transition : width 0.6s ease;
+}
+
+@media screen and (max-width: 820px) {
+
+    nav a, nav button{
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 414px) {
+    nav{
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav li{
+        margin-left: 0;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    .description, .ingredients, .galerie{
+        padding: 20px;
+    }
+}
