@@ -1,3 +1,5 @@
+$crisp.push(["set", "user:nickname", ["john"]]);
+
 nav = document.getElementById('nav')
 logo = document.getElementById('logo')
 boutonModal = document.getElementById('boutonModal')
